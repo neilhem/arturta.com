@@ -1,0 +1,72 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@keyframes animSlide {
+	0% { 
+		opacity: 0; 
+		transform: translateY(100px);
+	}
+}
+.swiper-container {
+  @include square(100%);
+}
+.swiper-slide {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 13px;
+  
+  .caption {
+  	margin-top: 15%;
+  	max-width: 480px;
+  	width: 50%;
+  }
+  .title {
+  	margin-bottom: $line-height-computed;
+  	font-size: 50px;
+  	font-style: italic;
+  }
+}
+.swiper-slide-active {
+	.title {
+		animation: animSlide .5s .3s both;
+	}
+	p {
+		animation: animSlide .5s .8s both;
+	}
+}
+.swiper-pagination-bullet {
+	@include square(3px);
+	background-color: #000;
+	opacity: 1;
+
+	.theme-white & {
+		background-color: #fff;
+	}
+}
+.swiper-container-vertical > .swiper-pagination .swiper-pagination-bullet {
+	margin-right: auto;
+	margin-left: auto;
+}
+.swiper-container-vertical > .swiper-pagination .swiper-pagination-bullet-active {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.swiper-pagination-bullet-active {
+	@include square(11px);
+}
+
+.copyright {
+	font-size: 0.83em;
+}
+
+.theme-white {
+	color: #fff;
+	a {
+		color: #fff;
+	}
+}

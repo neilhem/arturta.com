@@ -1,0 +1,15 @@
+.navbar--main {
+	.navbar-brand {
+		color: inherit;
+		font-family: $headings-font-family;
+		font-size: 22px;
+		font-style: italic;
+	}
+
+	.navbar-nav > li > a {
+		font-size: 13px;
+		> span {
+			border-bottom: 1px solid rgba(#fff, .2);
+		}
+	}
+}
