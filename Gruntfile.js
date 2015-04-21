@@ -506,7 +506,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('publish', [
-    'grunt:build',
+    'build',
     'buildcontrol:pages'
   ]);
 
