@@ -5,21 +5,39 @@
   padding: 0.2em 0;
 }
 
+.link {
+  > span {
+    border-bottom: 1px solid rgba(#196bab, .2);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    > span {
+      border-bottom-color: #196bab;
+    }
+  }
+}
+
+
 @keyframes animSlide {
-	0% { 
-		opacity: 0; 
+	0% {
+		opacity: 0;
 		transform: translateY(100px);
 	}
 }
 .swiper-container {
   @include square(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .swiper-slide {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 13px;
-  
+
   .caption {
   	margin-top: 15%;
   	max-width: 480px;
@@ -72,7 +90,7 @@
 }
 
 .lang {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 21px;
 	z-index: 10;

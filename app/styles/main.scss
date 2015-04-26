@@ -5,10 +5,13 @@
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "base";
 @import "mixins";
 @import "layout";
 @import "common";
 
 @import "modules/fonts";
+@import "modules/icons";
 @import "modules/navs";
 @import "modules/pages";
+@import "modules/thumbnails";

@@ -1,4 +1,45 @@
 .page {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 45px;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 30px;
+		bottom: 30px;
+		z-index: 100;
+		content: "";
+		width: 1px;
+		background-color: rgba(#fff, .1);
+	}
+
+	&:before {
+		left: 30px;
+	}
+
+	&::after {
+		right: 30px;
+	}
+
+	&-header {
+		margin-top: 100px;
+		margin-bottom: 50px;
+		padding-bottom: 0;
+		border-width: 0;
+		.title {
+			margin-bottom: $line-height-computed;
+			font-size: 50px;
+			font-style: italic;
+		}
+	}
+}
+
+.page--main {
+	position: relative;
+	height: 100vh;
+}
+
+.page--team {
+	height: 100%;
+	background-color: #f7f7f7;
+  background-clip: content-box;
 }

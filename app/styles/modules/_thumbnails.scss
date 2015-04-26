@@ -1,0 +1,23 @@
+.thumbnail--project {
+  border-color: transparent;
+  border-radius: 0;
+  > img,
+  a > img {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .caption {
+    padding: 15px 0 0;
+  }
+  .title {
+    font-family: inherit;
+    > a {
+      border-bottom: 1px solid rgba(#196bab, .2);
+      &:hover,
+      &:focus {
+        border-bottom-color: #196bab;
+        text-decoration: none;
+      }
+    }
+  }
+}

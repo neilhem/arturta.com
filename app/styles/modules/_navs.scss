@@ -1,4 +1,6 @@
 .navbar--main {
+	margin-top: 3px;
+
 	.navbar-brand {
 		color: inherit;
 		font-family: $headings-font-family;
@@ -10,6 +12,27 @@
 		font-size: 13px;
 		> span {
 			border-bottom: 1px solid rgba(#fff, .2);
+		}
+	}
+}
+
+.nav--secondary {
+	font-size: $font-size-small;
+	> li {
+		float: left;
+		> a {
+			padding: 0 8px;
+			border-radius: 3px;
+		}
+	}
+
+	> .active {
+		> a {
+			background-color: #ffefbf;
+			color: #000;
+		}
+		.link > span {
+			border-bottom-color: transparent;
 		}
 	}
 }

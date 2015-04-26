@@ -72,6 +72,10 @@ module.exports = function(grunt) {
           '<%= config.tmp %>/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*'
         ]
+      },
+      icons: {
+        files: ['<%= config.app %>/images/icons/{,*/}*.png'],
+        tasks: ['sprite:server', 'sass:server']
       }
     },
 
@@ -81,6 +85,7 @@ module.exports = function(grunt) {
         port: 9000,
         open: true,
         livereload: 35729,
+
         // Change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
       },
@@ -160,7 +165,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
         sourceMap: true,
-        includePaths: ['bower_components'],
+        includePaths: ['bower_components', '<%= config.tmp %>/styles'],
         imagePath: '../images'
       },
       dist: {
@@ -421,7 +426,7 @@ module.exports = function(grunt) {
         dest: '<%= config.tmp %>/images/generated/sprites.png',
         destCss: '<%= config.tmp %>/styles/_sprites.scss',
         cssVarMap: function(sprite) {
-          sprite.name = 'icon-' + sprite.name;
+          sprite.name = 'icon--' + sprite.name;
         }
       },
       dist: {
@@ -430,7 +435,7 @@ module.exports = function(grunt) {
         destCss: '<%= config.tmp %>/styles/sprites.scss',
         imgPath: '../images/generated/sprites.png',
         cssVarMap: function(sprite) {
-          sprite.name = 'icon-' + sprite.name;
+          sprite.name = 'icon--' + sprite.name;
         }
       }
     },
@@ -456,6 +461,7 @@ module.exports = function(grunt) {
     if (grunt.option('allow-remote')) {
       grunt.config.set('connect.options.hostname', '0.0.0.0');
     }
+
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
