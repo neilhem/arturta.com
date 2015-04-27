@@ -39,9 +39,33 @@
   font-size: 13px;
 
   .caption {
+    position: relative;
   	margin-top: 15%;
   	max-width: 480px;
   	width: 50%;
+
+    &-nav {
+      position: absolute;
+      top: 0;
+      right: 100%;
+      padding-right: 10px;
+      text-align: center;
+      color: #000;
+      font-size: 13px;
+      opacity: .5;
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &-link {
+        color: inherit;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
   }
   .title {
   	margin-bottom: $line-height-computed;
@@ -143,4 +167,23 @@
 		background-color: rgba(#000,.4);
 		border-radius: 3px;
 	}
+}
+
+.client-pagination {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	z-index: 10;
+	padding-left: 0;
+	font-size: 8px;
+	list-style: none;
+	transform: translateY(-50%);
+
+	&-item {
+		cursor: pointer;
+		line-height: 20px;
+	}
+	&-item-active > a {
+    color: #697884;
+  }
 }
