@@ -10,10 +10,18 @@
 		font-weight: bold;
 	}
 
-	.navbar-nav > li > a {
-		font-size: 13px;
-		> span {
-			border-bottom: 1px solid rgba(#fff, .2);
+	.navbar-nav {
+		> li > a {
+			font-size: 13px;
+			> span {
+				border-bottom: 1px solid rgba(#fff, .2);
+			}
+		}
+		> .active > a {
+			color: $text-color;
+			> span {
+				border-bottom-color: rgba(#000, .2);
+			}
 		}
 	}
 }

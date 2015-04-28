@@ -117,7 +117,7 @@
 	position: fixed;
 	top: 50%;
 	left: 21px;
-	z-index: 10;
+	z-index: 100;
 	font-size: 8px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -185,5 +185,42 @@
 	}
 	&-item-active > a {
     color: #697884;
+  }
+}
+.clinets-hint {
+  font-size: 11px;
+}
+.text-client {
+  color: #1994ab;
+}
+.list-clients {
+  margin-bottom: 50px;
+  font-size: $font-size-small;
+  &-type {
+    color: rgba(#000, .5);
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .list-unstyled {
+    margin-bottom: 15px;
+  }
+}
+
+.img-container {
+  position: relative;
+  padding-right: 35%;
+  &::after {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    content: attr(data-text);
+    width: 25%;
+    color: rgba(#000, .5);
+    font-size: $font-size-small;
   }
 }

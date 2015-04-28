@@ -468,9 +468,9 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
-      'sprite:dist',
       'wiredep',
       'assemble:server',
+      'sprite:server',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',

@@ -1,4 +1,6 @@
 .l {
+	min-height: 100vh;
+	position: relative;
 	&-header,
 	&-footer {
 		z-index: 100;
@@ -13,13 +15,16 @@
 .l-footer {
 	position: absolute;
 	bottom: 0;
-	padding-bottom: 25px;
+	padding-top: 5px;
+	padding-bottom: 23px;
 	width: 100%;
 	height: 45px;
-	color: rgba(#fff, .5);
 	font-size: $font-size-small;
 
 	.list-inline {
 		margin-bottom: 0;
+	}
+	.code {
+		font-size: 9px;
 	}
 }
