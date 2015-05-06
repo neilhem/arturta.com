@@ -37,6 +37,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 13px;
+  line-height: 1.54;
+
+  &-bottom {
+    position: absolute;
+    bottom: 50px;
+  }
+
+  > .container {
+    height: 100%;
+  }
 
   .caption {
     position: relative;
@@ -71,6 +81,7 @@
   	margin-bottom: $line-height-computed;
   	font-size: 50px;
   	font-style: italic;
+    line-height: 40px;
   }
 }
 .swiper-slide-active {
