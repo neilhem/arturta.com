@@ -15,6 +15,8 @@ $(function() {
     paginationClickable: true,
     direction: 'vertical',
     mousewheelControl: true,
+    nextButton: '.caption-nav-link.next',
+    prevButton: '.caption-nav-link.prev',
     onInit: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     },
@@ -54,6 +56,8 @@ $(function() {
     bulletActiveClass: 'team-pagination-item-active',
     direction: 'vertical',
     mousewheelControl: true,
+    nextButton: '.caption-nav-link.next',
+    prevButton: '.caption-nav-link.prev',
     onInit: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     },

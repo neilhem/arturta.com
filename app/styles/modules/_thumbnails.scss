@@ -19,6 +19,11 @@
         border-bottom-color: #196bab;
         text-decoration: none;
       }
+
+      &:visited {
+        color: #7b079b;
+        border-bottom-color: rgba(#7b079b, .2);
+      }
     }
   }
 }
