@@ -30,6 +30,12 @@
 
 .page--clients {}
 
+.page--projects {
+  .page-body {
+    animation: animSlide .3s .6s both;
+  }
+}
+
 .page--project {
 	position: relative;
 	.nav {
