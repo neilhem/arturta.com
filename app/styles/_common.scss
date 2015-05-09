@@ -62,7 +62,6 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 13px;
   line-height: 1.54;
 
   &-bottom {
@@ -76,7 +75,7 @@
 
   .caption {
     position: relative;
-  	margin-top: 15%;
+  	margin-top: 10%;
   	max-width: 480px;
   	width: 50%;
 
@@ -259,7 +258,8 @@
     top: 20px;
     left: 100%;
     content: attr(data-text);
-    width: 25%;
+    padding-left: 50px;
+    width: 50%;
     color: rgba(#000, .5);
     font-size: $font-size-small;
   }

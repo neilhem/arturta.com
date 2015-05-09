@@ -18,7 +18,9 @@
 
       &:visited {
         color: #7b079b;
-        border-bottom-color: rgba(#7b079b, .2);
+        > span {
+          border-bottom-color: rgba(#7b079b, .2);
+        }
       }
     }
   }
