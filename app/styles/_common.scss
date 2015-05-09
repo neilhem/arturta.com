@@ -193,11 +193,14 @@
   top: 0;
 	right: 200px;
 	z-index: 10;
-  margin-top: 12%;
+  margin-top: 14%;
 	padding-left: 0;
-	color: rgba(#fff,.5);
+	color: rgba(#000,.4);
 	font-size: $font-size-small;
 	list-style: none;
+  .theme-white & {
+    color: rgba(#fff,.5);
+  }
 
 	&-item {
 		counter-increment: index;
@@ -214,15 +217,18 @@
 		}
 		> span {
 			color: $link-color;
-
       .theme-white & {
         color: #fff;
       }
 		}
 	}
 	&-item-active {
-		background-color: rgba(#000,.4);
+		background-color: rgba(#000,.1);
 		border-radius: 3px;
+
+    .theme-white & {
+      background-color: rgba(#000,.4);
+    }
 	}
 }
 
