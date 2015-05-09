@@ -1,40 +1,6 @@
 .page {
 	padding-bottom: 45px + 40px;
 
-	&::before,
-	&::after {
-		position: absolute;
-		top: 30px;
-		bottom: 30px;
-		z-index: 99;
-		content: "";
-		width: 1px;
-		background-color: #eee;
-	}
-
-	&-line {
-		position: absolute;
-		left: 30px;
-		right: 30px;
-		z-index: 99;
-		height: 1px;
-		background-color: #eee;
-		&.top {
-			top: 30px;
-		}
-		&.bottom {
-			bottom: 30px;
-		}
-	}
-
-	&:before {
-		left: 30px;
-	}
-
-	&::after {
-		right: 30px;
-	}
-
 	&-header {
 		margin-top: 10%;
 		margin-bottom: 50px;
@@ -70,9 +36,9 @@
 		margin-bottom: $line-height-computed*1.5;
 	}
 	.page-body {
-		font-size: 13px;
 		p {
 			width: 65%;
+			max-width: 714px;
 			margin-bottom: $line-height-computed;
 		}
 		.text-muted {
