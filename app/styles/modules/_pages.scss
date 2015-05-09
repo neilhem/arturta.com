@@ -38,6 +38,7 @@
 		margin-bottom: $line-height-computed*1.5;
 	}
 	.page-body {
+    @include clearfix;
 		p {
 			max-width: 714px;
 			margin-bottom: $line-height-computed;
@@ -47,11 +48,7 @@
 		}
 
 		> .pull-right {
-			.title {
-        color: rgba(#000, .5);
-				font-size: 10px;
-        letter-spacing: .1em;
-			}
+
 		}
 		.team-pagination {
 			position: static;
@@ -66,6 +63,21 @@
 			}
 		}
 	}
+  .page-col,
+  .page-side {
+    float: left;
+  }
+  .page-col {
+    max-width: 720px;
+  }
+  .page-side {
+    padding-left: 50px;
+    .title {
+      color: rgba(#000, .5);
+      font-size: 10px;
+      letter-spacing: .1em;
+    }
+  }
 }
 
 .page--team {
@@ -73,7 +85,6 @@
 	flex-direction: column;
 	height: 100vh;
 	padding: 30px;
-	background-color: #f7f7f7;
 
 	.page-header,
 	.page-footer {

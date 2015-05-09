@@ -190,14 +190,14 @@
 
 .team-pagination {
 	position: absolute;
-	top: 50%;
+  top: 0;
 	right: 200px;
 	z-index: 10;
+  margin-top: 12%;
 	padding-left: 0;
 	color: rgba(#fff,.5);
 	font-size: $font-size-small;
 	list-style: none;
-	transform: translateY(-50%);
 
 	&-item {
 		counter-increment: index;
@@ -213,7 +213,11 @@
 		  text-align: right;
 		}
 		> span {
-			color: #fff;
+			color: $link-color;
+
+      .theme-white & {
+        color: #fff;
+      }
 		}
 	}
 	&-item-active {
@@ -266,7 +270,6 @@
 
 .img-container {
   position: relative;
-  max-width: 720px;
   &::after {
     position: absolute;
     top: 20px;
