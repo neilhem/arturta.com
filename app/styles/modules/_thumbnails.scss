@@ -14,12 +14,6 @@
     font-family: inherit;
     line-height: 18px;
     > a {
-      border-bottom: 1px solid rgba(#196bab, .2);
-      &:hover,
-      &:focus {
-        border-bottom-color: #196bab;
-        text-decoration: none;
-      }
 
       &:visited {
         color: #7b079b;

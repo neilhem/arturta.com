@@ -36,6 +36,14 @@
   }
 }
 
+.list-projects {
+  display: flex;
+  flex-wrap: wrap;
+  > .thumbnail {
+    flex: 0 0 200px;
+  }
+}
+
 
 @keyframes animSlide {
 	0% {
