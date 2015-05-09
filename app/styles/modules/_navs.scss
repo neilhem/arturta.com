@@ -1,10 +1,20 @@
-.nav > li > a {
-	&:visited {
-		color: #196bab;
-		> span {
-			border-bottom-color: rgba(#196bab, .2);
-		}
-	}
+.nav {
+  > li > a {
+  	> span {
+      border-bottom: 1px solid rgba(#196bab, .2);
+    }
+  }
+
+  .theme-white & {
+    > li > a {
+      > span {
+        border-bottom: 1px solid rgba(#fff, .2);
+      }
+    }
+    > .active > a {
+      color: rgba(#fff, .7);
+    }
+  }
 }
 .navbar--main {
 	z-index: 100;
@@ -26,7 +36,7 @@
         color: #ca0606;
 				opacity: 1;
 				> span {
-					border-bottom-color: rgba(#ca0606, .5);
+					border-bottom-color: rgba(#ca0606, .2);
 				}
 			}
 		}
@@ -50,7 +60,7 @@
 	}
 
 	> .active {
-		> a {
+		> .link {
 			background-color: #ffefbf;
 			color: #000;
 		}

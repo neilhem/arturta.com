@@ -1,4 +1,5 @@
 .thumbnail--project {
+  margin-bottom: 30px;
   border-color: transparent;
   border-radius: 0;
   > img,
@@ -8,11 +9,12 @@
   }
   .caption {
     padding: 15px 0 0;
-    width: 80%;
+    width: 90%;
   }
   .title {
     margin-top: 0;
     font-family: inherit;
+    font-size: $font-size-base;
     line-height: 18px;
   }
 }

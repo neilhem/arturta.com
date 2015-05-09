@@ -46,7 +46,9 @@
 
 		> .pull-right {
 			.title {
+        color: rgba(#000, .5);
 				font-size: 10px;
+        letter-spacing: .1em;
 			}
 		}
 		.team-pagination {
@@ -70,8 +72,6 @@
 	height: 100vh;
 	padding: 30px;
 	background-color: #f7f7f7;
-  background-clip: content-box;
-	font-size: 13px;
 
 	.page-header,
 	.page-footer {

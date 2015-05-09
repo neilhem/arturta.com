@@ -20,6 +20,14 @@
 	width: 100%;
 	height: 45px;
 
+  .text-muted {
+    color: rgba(#000, .5);
+  }
+
+  .theme-white & .text-muted {
+    color: rgba(#fff, .5);
+  }
+
 	.list-inline {
 		margin-bottom: 0;
 	}
