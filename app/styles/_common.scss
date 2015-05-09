@@ -4,6 +4,9 @@
   background: #ccc;
   color: #000;
 }
+.container-fluid {
+  max-width: 90%;
+}
 
 .link {
   > span {
@@ -12,9 +15,10 @@
 
   &:hover,
   &:focus {
+    color: #ca0606;
     text-decoration: none;
     > span {
-      border-bottom-color: #196bab;
+      border-bottom-color: rgba(#ca0606, .2);
     }
   }
 
@@ -28,9 +32,6 @@
     &:hover,
     &:focus {
       color: rgba(#fff, .7);
-      > span {
-        border-bottom-color: rgba(#fff, .4);
-      }
     }
   }
 }
