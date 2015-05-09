@@ -43,6 +43,24 @@
 		.text-muted {
 			color: rgba(#000, .5);
 		}
+
+		> .pull-right {
+			.title {
+				font-size: 10px;
+			}
+		}
+		.team-pagination {
+			position: static;
+			transform: translateY(0);
+		}
+		.team-pagination-item {
+			color: $text-color;
+			&::before {
+				margin-right: 0;
+				width: auto;
+				font-size: 9px;
+			}
+		}
 	}
 }
 
