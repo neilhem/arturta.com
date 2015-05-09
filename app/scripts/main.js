@@ -11,7 +11,7 @@ $(function() {
   }
 
   var mainSlider = new Swiper('.js-carousel-main', {
-    speed: 500,
+    speed: 600,
     pagination: '.swiper-pagination',
     paginationClickable: true,
     direction: 'vertical',

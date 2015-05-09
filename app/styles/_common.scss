@@ -63,7 +63,7 @@
 @keyframes animSlide {
 	0% {
 		opacity: 0;
-		transform: translateY(100px);
+		transform: translateY(50px);
 	}
 }
 .swiper-container {
@@ -132,10 +132,10 @@
 }
 .swiper-slide-active {
 	.title {
-		animation: animSlide .5s .3s both;
+		animation: animSlide .3s .6s both;
 	}
 	p {
-		animation: animSlide .5s .8s both;
+		animation: animSlide .6s .6s both;
 	}
 }
 .swiper-pagination-bullet {
