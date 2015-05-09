@@ -28,6 +28,7 @@ $(function() {
   });
 
   var clientSlider = new Swiper('.js-carousel-client', {
+    speed: 600,
     pagination: '.client-pagination',
     paginationClickable: true,
     bulletClass: 'client-pagination-item',
@@ -51,6 +52,7 @@ $(function() {
   });
 
   var teamSlider = new Swiper('.js-carousel-team', {
+    speed: 600,
     pagination: '.team-pagination',
     paginationClickable: true,
     bulletClass: 'team-pagination-item',
