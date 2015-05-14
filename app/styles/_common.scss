@@ -92,6 +92,7 @@
   	margin-top: 10%;
   	max-width: 540px;
   	width: 50%;
+    -webkit-font-smoothing: subpixel-antialiased;
 
     &-nav {
       position: absolute;
@@ -128,6 +129,9 @@
   	font-size: 44px;
     font-weight: bold;
     line-height: 1.14;
+    + .desc {
+      opacity: .5;
+    }
   }
 }
 .swiper-slide-active {

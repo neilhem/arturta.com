@@ -11,7 +11,7 @@ $(function() {
   }
 
   var mainSlider = new Swiper('.js-carousel-main', {
-    speed: 600,
+    speed: 800,
     pagination: '.swiper-pagination',
     paginationClickable: true,
     direction: 'vertical',
@@ -28,7 +28,7 @@ $(function() {
   });
 
   var clientSlider = new Swiper('.js-carousel-client', {
-    speed: 600,
+    speed: 800,
     pagination: '.client-pagination',
     paginationClickable: true,
     bulletClass: 'client-pagination-item',
@@ -52,7 +52,7 @@ $(function() {
   });
 
   var teamSlider = new Swiper('.js-carousel-team', {
-    speed: 600,
+    speed: 800,
     pagination: '.team-pagination',
     paginationClickable: true,
     bulletClass: 'team-pagination-item',
