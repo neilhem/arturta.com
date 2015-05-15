@@ -10,6 +10,22 @@ $(function() {
     }
   }
 
+  var mainSlider = new Swiper('.js-carousel-test', {
+    speed: 800,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    mousewheelControl: true,
+    nextButton: '.caption-nav-link.next',
+    prevButton: '.caption-nav-link.prev',
+    onInit: function(swiper) {
+      setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
+    },
+
+    onSlideChangeStart: function(swiper) {
+      setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
+    }
+  });
+
   var mainSlider = new Swiper('.js-carousel-main', {
     speed: 800,
     pagination: '.swiper-pagination',
