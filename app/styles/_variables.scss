@@ -3,10 +3,6 @@ $icon-font-path: 					"../bower_components/bootstrap-sass-official/assets/fonts/
 $text-color:            	#000;
 $link-color:           		#196bab;
 
-// This is bad practice for setting
-// base line height not integer number 13*1.4 ~ 18.2
-$line-height-base:        1.4;
-
 $font-size-base:          13px;
 $line-height-computed:    floor((14px *  1.428571429 ));
 
