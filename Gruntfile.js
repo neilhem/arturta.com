@@ -188,21 +188,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Add vendor prefixed styles
-    autoprefixer: {
-      options: {
-        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.tmp %>/styles/',
-          src: '{,*/}*.css',
-          dest: '<%= config.tmp %>/styles/'
-        }]
-      }
-    },
-
     // Use tomorrow's CSS syntax, today
     cssnext: {
       options: {
