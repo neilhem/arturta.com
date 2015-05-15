@@ -1,5 +1,10 @@
 {
-  "name": "urta",
+  "name": "artyurta.com",
+  "description": "web page",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilhem/artyurta.com.git"
+  }
   "devDependencies": {
     "apache-server-configs": "~2.7.1",
     "assemble": "~0.4.42",
