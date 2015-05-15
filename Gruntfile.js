@@ -57,11 +57,11 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer']
+        tasks: ['sass:server', 'cssnext']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        tasks: ['newer:copy:styles', 'cssnext']
       },
       livereload: {
         options: {
@@ -192,6 +192,22 @@ module.exports = function(grunt) {
     autoprefixer: {
       options: {
         browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.tmp %>/styles/',
+          src: '{,*/}*.css',
+          dest: '<%= config.tmp %>/styles/'
+        }]
+      }
+    },
+
+    // Use tomorrow's CSS syntax, today
+    cssnext: {
+      options: {
+        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
+        sourcemap: true
       },
       dist: {
         files: [{
@@ -473,7 +489,7 @@ module.exports = function(grunt) {
       'assemble:server',
       'sprite:server',
       'concurrent:server',
-      'autoprefixer',
+      'cssnext',
       'connect:livereload',
       'watch'
     ]);
@@ -484,7 +500,7 @@ module.exports = function(grunt) {
       grunt.task.run([
         'clean:server',
         'concurrent:test',
-        'autoprefixer'
+        'cssnext'
       ]);
     }
 
@@ -501,7 +517,7 @@ module.exports = function(grunt) {
     'assemble:dist',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
+    'cssnext',
     'concat',
     'cssmin',
     'uglify',
