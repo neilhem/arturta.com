@@ -161,6 +161,15 @@
 	@include square(11px);
 }
 
+.swiper-container-h {
+  .swiper-slide {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .theme-white {
 	color: #fff;
 	a {

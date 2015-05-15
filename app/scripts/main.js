@@ -10,10 +10,11 @@ $(function() {
     }
   }
 
-  var mainSlider = new Swiper('.js-carousel-test', {
+  var testSlider = new Swiper('.js-carousel-test', {
     speed: 800,
     pagination: '.swiper-pagination',
     paginationClickable: true,
+    direction: 'vertical',
     mousewheelControl: true,
     nextButton: '.caption-nav-link.next',
     prevButton: '.caption-nav-link.prev',
@@ -24,6 +25,14 @@ $(function() {
     onSlideChangeStart: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     }
+  });
+
+  var testSliderH = new Swiper('.swiper-container-h', {
+    pagination: '.swiper-pagination-h',
+    paginationClickable: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 50
   });
 
   var mainSlider = new Swiper('.js-carousel-main', {
