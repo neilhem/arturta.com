@@ -27,7 +27,7 @@
     "grunt-newer": "~1.1.0",
     "grunt-rev": "~0.1.0",
     "grunt-sass": "~1.0.0",
-    "grunt-spritesmith": "~3.9.0",
+    "grunt-spritesmith": "~4.6.0",
     "grunt-svgmin": "~2.0.0",
     "grunt-usemin": "~3.0.0",
     "grunt-wiredep": "~2.0.0",
@@ -36,6 +36,6 @@
     "time-grunt": "~1.0.0"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.0"
   }
 }
