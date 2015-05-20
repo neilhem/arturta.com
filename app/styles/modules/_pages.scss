@@ -22,7 +22,7 @@
 
 .page--main {
 	.swiper-slide:first-child {
-    @include img-high-dpi('main-02.jpg', 1440px, 900px);
+    @include img-high-dpi('main-02', 'jpg', 1440px, 900px);
   }
 }
 

@@ -11,15 +11,15 @@
   }
 }
 
-@mixin img-high-dpi($image, $width, $height) {
-  background-image: image-url('#{$image}');
+@mixin img-high-dpi($image, $ext, $width, $height) {
+  background-image: image-url('#{$image}.#{$ext}');
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),
     only screen and (-o-min-device-pixel-ratio: 2/1),
     only screen and (min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
-    background-image: image-url('#{$image}@2x');
+    background-image: image-url('#{$image}@2x.#{$ext}');
     background-size: $width $height;
   }
 }

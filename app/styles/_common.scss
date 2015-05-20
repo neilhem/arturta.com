@@ -11,13 +11,13 @@
 .js-carousel-test {
   .swiper-wrapper > .swiper-slide {
     &:nth-child(1) {
-      @include img-high-dpi('prj-bg.jpg', 1440px, 900px);
+      @include img-high-dpi('prj-bg', 'jpg', 1440px, 900px);
     }
     &:nth-child(2) {
-      @include img-high-dpi('prj-bg-2.jpg', 1440px, 900px);
+      @include img-high-dpi('prj-bg-2', 'jpg', 1440px, 900px);
     }
     &:nth-child(3) {
-      @include img-high-dpi('bottom_bg.jpg', 1440px, 900px);
+      @include img-high-dpi('bottom_bg', 'jpg', 1440px, 900px);
     }
   }
 }

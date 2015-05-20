@@ -29,6 +29,9 @@
     transition-duration: .6s;
     transition-property: color;
 	}
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
 
 	.navbar-nav {
 		> li > a {
