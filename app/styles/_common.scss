@@ -9,7 +9,7 @@
 }
 
 .js-carousel-test {
-  .swiper-wrapper > .swiper-slide {
+  > .swiper-wrapper > .swiper-slide {
     &:nth-child(1) {
       @include img-high-dpi('prj-bg', 'jpg', 1440px, 900px);
     }
@@ -18,6 +18,15 @@
     }
     &:nth-child(3) {
       @include img-high-dpi('bottom_bg', 'jpg', 1440px, 900px);
+    }
+  }
+
+  .swiper-container-h .swiper-slide {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 40vh;
+    &-caption {
+      padding-top: $line-height-computed;
     }
   }
 }
@@ -143,6 +152,15 @@
   	margin-bottom: $line-height-computed;
   	font-size: 4.4rem;
     line-height: 1.14;
+    > a {
+      border-bottom: 1px solid rgba(#fff, .4);
+
+      &:hover,
+      &:focus {
+        border-bottom-color: #fff;
+        text-decoration: none;
+      }
+    }
   }
 }
 .swiper-slide-active {
