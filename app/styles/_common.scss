@@ -8,7 +8,7 @@
   max-width: 90%;
 }
 
-.js-carousel-test {
+.swiper-container--timeline {
   > .swiper-wrapper > .swiper-slide {
     &:nth-child(1) {
       @include img-high-dpi('prj-bg', 'jpg', 1440px, 900px);
@@ -24,9 +24,20 @@
   .swiper-container-h .swiper-slide {
     align-items: flex-start;
     flex-direction: column;
-    width: 40vh;
+    width: 35vh;
     &-caption {
       padding-top: $line-height-computed;
+    }
+  }
+}
+
+.swiper-container--alarm {
+  > .swiper-wrapper > .swiper-slide {
+    &:nth-child(1) {
+      @include img-high-dpi('alarm-page-bg', 'jpg', 1920, 1080px);
+    }
+    &:nth-child(2) {
+      @include img-high-dpi('alarm-home-bg', 'jpg', 1920px, 1080px);
     }
   }
 }
