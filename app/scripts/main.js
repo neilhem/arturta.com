@@ -13,20 +13,23 @@ $(function() {
   $('.section').windows({
     snapping: true,
     snapSpeed: 500,
-    snapInterval: 1100,
+    snapInterval: 500,
 
     onScroll: function(scrollPos) {
-      // scrollPos:Number
       $('.l-header').removeClass('in');
+      $('.l-footer').removeClass('in');
     },
 
     onSnapComplete: function($el) {
-      // after window ($el) snaps into place
+      setBodyClass($el.data('theme'));
       $('.l-header').addClass('in');
+      $('.l-footer').addClass('in');
     },
 
     onWindowEnter: function($el) {
       // when new window ($el) enters viewport
+      console.log($el);
+      setBodyClass($el.data('theme'));
     }
   })
 
