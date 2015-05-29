@@ -10,6 +10,26 @@ $(function() {
     }
   }
 
+  $('.section').windows({
+    snapping: true,
+    snapSpeed: 500,
+    snapInterval: 1100,
+
+    onScroll: function(scrollPos) {
+      // scrollPos:Number
+      $('.l-header').removeClass('in');
+    },
+
+    onSnapComplete: function($el) {
+      // after window ($el) snaps into place
+      $('.l-header').addClass('in');
+    },
+
+    onWindowEnter: function($el) {
+      // when new window ($el) enters viewport
+    }
+  })
+
   var testSlider = new Swiper('.js-carousel-test', {
     speed: 800,
     pagination: '.swiper-pagination',
@@ -32,7 +52,7 @@ $(function() {
     paginationClickable: true,
     slidesPerView: 'auto',
     centeredSlides: true,
-    spaceBetween: 50
+    spaceBetween: 30
   });
 
   var mainSlider = new Swiper('.js-carousel-main', {
