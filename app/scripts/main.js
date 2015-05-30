@@ -16,14 +16,16 @@ $(function() {
     snapInterval: 500,
 
     onScroll: function(scrollPos) {
-      $('.l-header').removeClass('in');
-      $('.l-footer').removeClass('in');
+      $('.l-header').addClass('is-hidden');
+      $('.l-footer').addClass('is-hidden');
+      $('section').removeClass('active');
     },
 
     onSnapComplete: function($el) {
       setBodyClass($el.data('theme'));
-      $('.l-header').addClass('in');
-      $('.l-footer').addClass('in');
+      $el.addClass('active');
+      $('.l-header').removeClass('is-hidden');
+      $('.l-footer').removeClass('is-hidden');
     },
 
     onWindowEnter: function($el) {

@@ -7,10 +7,26 @@
 	}
 }
 
+.l-header,
+.l-footer {
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
 .l-header {
 	position: fixed;
 	top: 0;
 	width: 100%;
+  .icon {
+    @include size(65px, 28px);
+    fill: currentColor;
+    color: #000;
+
+    .theme-white & {
+      color: #fff;
+    }
+  }
 }
 .l-footer {
 	position: fixed;
