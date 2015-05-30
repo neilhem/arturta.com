@@ -1,6 +1,7 @@
 // jshint devel:true
 $(function() {
-  //initialize swiper when document ready
+
+  'use strict';
 
   function setBodyClass(theme) {
     if (theme) {
@@ -10,28 +11,23 @@ $(function() {
     }
   }
 
-  $('.section').windows({
-    snapping: true,
-    snapSpeed: 500,
-    snapInterval: 500,
-
-    onScroll: function(scrollPos) {
-      $('.l-header').addClass('is-hidden');
-      $('.l-footer').addClass('is-hidden');
+  $('.js-snap').panelSnap({
+    panelSelector: '> section',
+    slideSpeed: 500,
+    onSnapStart: function() {
+      $('.l-header').removeClass('in');
+      $('.l-footer').removeClass('in');
     },
 
-    onSnapComplete: function($el) {
-      setBodyClass($el.data('theme'));
-      $('.l-header').removeClass('is-hidden');
-      $('.l-footer').removeClass('is-hidden');
+    onSnapFinish: function() {
+      $('.l-header').addClass('in');
+      $('.l-footer').addClass('in');
     },
 
-    onWindowEnter: function($el) {
-      // when new window ($el) enters viewport
-      console.log($el);
-      setBodyClass($el.data('theme'));
+    onActivate: function(e) {
+      setBodyClass($('.js-snap > .section').eq(0).data('theme'));
     }
-  })
+  });
 
   var testSlider = new Swiper('.js-carousel-test', {
     speed: 800,

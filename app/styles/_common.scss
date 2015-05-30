@@ -9,15 +9,12 @@
 }
 
 .section {
-  width: 100%;
+  position: relative;
   height: 100%;
-  position: absolute;
   padding-bottom: 85px;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   &:nth-child(1) {
-    @include img-high-dpi('main-02', 'jpg', 1440px, 900px);
+    @include img-high-dpi('main-03', 'jpg', 1920px, 1080px);
   }
   &:nth-child(2) {
     @include img-high-dpi('alarm-page-bg', 'jpg', 1920px, 1080px);
@@ -25,18 +22,18 @@
   &:nth-child(3) {
     @include img-high-dpi('alarm-page-bg', 'jpg', 1920px, 1080px);
   }
-}
-
-@for $i from 1 through 6 {
-  .section:nth-child(#{$i}) {
-    top: ($i - 1) * 100%;
+  &:nth-child(4) {
+    @include img-high-dpi('alarm-page-bg', 'jpg', 1920px, 1080px);
+  }
+  &:nth-child(5) {
+    @include img-high-dpi('alarm-page-bg', 'jpg', 1920px, 1080px);
   }
 }
 
 .swiper-container--timeline {
   > .swiper-wrapper > .swiper-slide {
     &:nth-child(1) {
-      @include img-high-dpi('prj-bg', 'jpg', 1440px, 900px);
+      @include img-high-dpi('prj-bg-3', 'jpg', 1920px, 1080px);
     }
     &:nth-child(2) {
       @include img-high-dpi('prj-bg-2', 'jpg', 1440px, 900px);
@@ -49,7 +46,6 @@
   .swiper-container-h .swiper-slide {
     align-items: flex-start;
     flex-direction: column;
-    justify-content: flex-start;
     width: 35vh;
     &-caption {
       padding-top: $line-height-computed;
@@ -189,28 +185,36 @@
     line-height: 1.14;
     > a {
       color: #000;
-      border-bottom: 1px solid rgba(#000, .2);
+      > span {
+        border-bottom: 1px solid rgba(#000, .2);
+      }
+
       &:hover,
       &:focus {
-        border-bottom-color: rgba(#000, .5);
         text-decoration: none;
+        > span {
+          border-bottom-color: rgba(#000, .5);
+        }
       }
 
       .theme-white & {
         color: #fff;
-        border-bottom-color: rgba(#fff, .2);
+        > span {
+          border-bottom-color: rgba(#fff, .2);
+        }
 
         &:hover,
         &:focus {
-          border-bottom-color: rgba(#fff, .5);
           text-decoration: none;
+          > span {
+            border-bottom-color: rgba(#fff, .5);
+          }
         }
       }
     }
   }
 }
-.swiper-slide-active,
-.section.active {
+.swiper-slide-active {
 	.title {
 		animation: animSlide .6s .6s both;
 	}

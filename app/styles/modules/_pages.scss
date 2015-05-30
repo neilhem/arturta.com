@@ -14,21 +14,16 @@
 	}
 }
 
-.page--main,
 .page--clients {
 	position: relative;
 	height: 100vh;
 }
 
 .page--main {
-	.swiper-slide:first-child {
-    @include img-high-dpi('main-02', 'jpg', 1440px, 900px);
-  }
+  height: 100vh;
+  padding-bottom: 0;
+  overflow-y: scroll;
 }
-
-.page--clients {}
-
-.page--projects {}
 
 .page--project {
 	position: relative;
