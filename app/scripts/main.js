@@ -16,14 +16,12 @@ $(function() {
     snapInterval: 500,
 
     onScroll: function(scrollPos) {
+      setBodyClass($el.data('theme'));
       $('.l-header').addClass('is-hidden');
       $('.l-footer').addClass('is-hidden');
-      $('section').removeClass('active');
     },
 
     onSnapComplete: function($el) {
-      setBodyClass($el.data('theme'));
-      $el.addClass('active');
       $('.l-header').removeClass('is-hidden');
       $('.l-footer').removeClass('is-hidden');
     },

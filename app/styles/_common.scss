@@ -19,8 +19,10 @@
   &:nth-child(1) {
     @include img-high-dpi('main-02', 'jpg', 1440px, 900px);
   }
-
   &:nth-child(2) {
+    @include img-high-dpi('alarm-page-bg', 'jpg', 1920px, 1080px);
+  }
+  &:nth-child(3) {
     @include img-high-dpi('alarm-page-bg', 'jpg', 1920px, 1080px);
   }
 }

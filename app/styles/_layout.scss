@@ -20,6 +20,7 @@
 	width: 100%;
   .icon {
     @include size(65px, 28px);
+    margin-top: -3px;
     fill: currentColor;
     color: #000;
 
