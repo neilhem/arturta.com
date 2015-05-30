@@ -20,6 +20,6 @@
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
     background-image: image-url('#{$image}@2x.#{$ext}');
-    background-size: $width $height;
+    background-size: cover;
   }
 }
