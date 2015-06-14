@@ -87,6 +87,9 @@ $(function() {
     mousewheelControl: true,
     nextButton: '.caption-nav-link.next',
     prevButton: '.caption-nav-link.prev',
+    scrollbar: '.swiper-scrollbar',
+    scrollbarHide: true,
+    parallax: true,
     onInit: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     },
@@ -118,7 +121,7 @@ $(function() {
       var $activePageBg = $('#scroller .section').eq(this.currentPage.pageY).find('.section-bg');
       console.log(this.y, this.currentPage);
       // $activePageBg.css({
-      //   transform: 'translateY(' + ((this.y * -1) / (this.currentPage.y + 1)) + 'px)'
+      //   transform: 'translateY(' + (window.innerHeight / 100 * (this.y * -1)) + '%)'
       // });
     });
 

@@ -28,6 +28,15 @@
   text-size-adjust: none;
 }
 
+.parallax-bg {
+  @include size(100%, 130%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 50%;
+  background-size: cover;
+}
+
 .section {
   position: relative;
   height: 100vh;
