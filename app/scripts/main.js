@@ -1,6 +1,5 @@
 // jshint devel:true
 $(function() {
-
   'use strict';
 
   function setBodyClass(theme) {
@@ -10,24 +9,6 @@ $(function() {
       $('body').removeClass('theme-white');
     }
   }
-
-  $('.js-snap').panelSnap({
-    panelSelector: '> section',
-    slideSpeed: 500,
-    onSnapStart: function() {
-      $('.l-header').removeClass('in');
-      $('.l-footer').removeClass('in');
-    },
-
-    onSnapFinish: function() {
-      $('.l-header').addClass('in');
-      $('.l-footer').addClass('in');
-    },
-
-    onActivate: function(e) {
-      setBodyClass($('.js-snap > .section').eq(0).data('theme'));
-    }
-  });
 
   var testSlider = new Swiper('.js-carousel-test', {
     speed: 800,
@@ -97,6 +78,7 @@ $(function() {
 
   var teamSlider = new Swiper('.js-carousel-team', {
     speed: 800,
+    grabCursor: true,
     pagination: '.team-pagination',
     paginationClickable: true,
     bulletClass: 'team-pagination-item',
@@ -118,4 +100,41 @@ $(function() {
       return '<li class="' + className + '"><span>' + data.name + '</span> ' + data.position + '</li>';
     }
   });
+
+  if ($('#wrapper').length) {
+    var myScroll = new IScroll('#wrapper', {
+      scrollbars: true,
+      mouseWheel: true,
+      scrollY: true,
+      bounce: true,
+      momentum: false,
+      snap: true,
+      probeType: 3
+    });
+
+    setBodyClass($('#scroller .section').eq(0).data('theme'));
+
+    myScroll.on('scroll', function() {
+      var $activePageBg = $('#scroller .section').eq(this.currentPage.pageY).find('.section-bg');
+      console.log(this.y, this.currentPage);
+      // $activePageBg.css({
+      //   transform: 'translateY(' + ((this.y * -1) / (this.currentPage.y + 1)) + 'px)'
+      // });
+    });
+
+    myScroll.on('scrollStart', function() {
+      $('#wrapper').addClass('is-scrolling');
+      console.log('scroll start');
+    });
+
+    myScroll.on('scrollEnd', function() {
+      $('#wrapper').removeClass('is-scrolling')
+      console.log('scroll end');
+      setBodyClass($('#scroller .section').eq(this.currentPage.pageY).data('theme'));
+    });
+
+    document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, false);
+  }
 });
