@@ -91,12 +91,7 @@ $(function() {
     },
 
     onSlideChangeStart: function(swiper) {
-      console.log('start', swiper.slides[swiper.activeIndex].dataset.theme);
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
-    },
-
-    onSlideChangeEnd: function(swiper) {
-      console.log('end', swiper);
     },
 
     paginationBulletRender: function(index, className) {
