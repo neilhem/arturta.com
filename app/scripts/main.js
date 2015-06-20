@@ -3,11 +3,7 @@ $(function() {
   'use strict';
 
   function setBodyClass(theme) {
-    if (theme) {
-      $('body').addClass('theme-' + theme);
-    } else {
-      $('body').removeClass('theme-white');
-    }
+    $('body').removeClass().addClass('theme-' + theme);
   }
 
   var testSlider = new Swiper('.js-carousel-test', {
@@ -90,16 +86,17 @@ $(function() {
     scrollbar: '.swiper-scrollbar',
     scrollbarHide: true,
     parallax: true,
-    freeMode: true,
-    freeModeSticky: true,
-    freeModeMomentumBounceRatio: 0,
-    freeModeMomentumRatio: 0,
     onInit: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     },
 
-    onSlideChangeEnd: function(swiper) {
+    onSlideChangeStart: function(swiper) {
+      console.log('start', swiper.slides[swiper.activeIndex].dataset.theme);
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
+    },
+
+    onSlideChangeEnd: function(swiper) {
+      console.log('end', swiper);
     },
 
     paginationBulletRender: function(index, className) {
