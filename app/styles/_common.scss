@@ -313,14 +313,14 @@
     }
   }
 }
-.swiper-slide-active {
-	.title {
-		animation: animSlide .6s .6s both;
-	}
-	p {
-		animation: animSlide .6s .8s both;
-	}
-}
+// .swiper-slide-active {
+// 	.title {
+// 		animation: animSlide .6s .6s both;
+// 	}
+// 	p {
+// 		animation: animSlide .6s .8s both;
+// 	}
+// }
 .swiper-pagination-bullet {
 	@include square(3px);
 	background-color: #000;

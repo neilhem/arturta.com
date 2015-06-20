@@ -90,11 +90,15 @@ $(function() {
     scrollbar: '.swiper-scrollbar',
     scrollbarHide: true,
     parallax: true,
+    freeMode: true,
+    freeModeSticky: true,
+    freeModeMomentumBounceRatio: 0,
+    freeModeMomentumRatio: 0,
     onInit: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     },
 
-    onSlideChangeStart: function(swiper) {
+    onSlideChangeEnd: function(swiper) {
       setBodyClass(swiper.slides[swiper.activeIndex].dataset.theme);
     },
 
