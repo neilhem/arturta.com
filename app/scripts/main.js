@@ -100,66 +100,21 @@ $(function() {
     }
   });
 
-  // if ($('#wrapper').length) {
-  //   var myScroll = new IScroll('#wrapper', {
-  //     scrollbars: true,
-  //     mouseWheel: true,
-  //     scrollY: true,
-  //     bounce: true,
-  //     momentum: false,
-  //     snap: true,
-  //     probeType: 3
-  //   });
+  var $windows = $('.section');
+  $windows.windows({
+    snapping: true,
+    snapSpeed: 500,
+    snapInterval: 1100,
+    onScroll: function(s) {},
 
-  //   setBodyClass($('#scroller .section').eq(0).data('theme'));
+    onSnapComplete: function($el) {
+      setBodyClass($el.data('theme'));
+    },
 
-  //   myScroll.on('scroll', function() {
-  //     var $activePageBg = $('#scroller .section').eq(this.currentPage.pageY).find('.section-bg');
-  //     console.log(this.y, this.currentPage);
-  //     $activePageBg.css({
-  //       transform: 'translate3d(0, ' + ((this.y > 0 ? this.y : this.y * -1) / (window.innerHeight / 100)) + '%, 0)'
-  //     });
-  //   });
-
-  //   myScroll.on('scrollStart', function() {
-  //     $('#wrapper').addClass('is-scrolling');
-  //     console.log('scroll start');
-  //   });
-
-  //   myScroll.on('scrollEnd', function() {
-  //     $('#wrapper').removeClass('is-scrolling')
-  //     console.log('scroll end');
-  //     setBodyClass($('#scroller .section').eq(this.currentPage.pageY).data('theme'));
-  //   });
-
-  //   document.addEventListener('touchmove', function(e) {
-  //     e.preventDefault();
-  //   }, false);
-  // }
-
-  var $frame  = $('#smart');
-  var $slidee = $frame.children('ul').eq(0);
-  var $wrap   = $frame.parent();
-
-  // Call Sly on frame
-  $frame.sly({
-    itemNav: 'basic',
-    smart: 1,
-    activateOn: 'click',
-    mouseDragging: 1,
-    touchDragging: 1,
-    releaseSwing: 1,
-    startAt: 3,
-    scrollBar: $wrap.find('.scrollbar'),
-    scrollBy: 1,
-    pagesBar: $wrap.find('.pages'),
-    activatePageOn: 'click',
-    speed: 300,
-    elasticBounds: 1,
-    easing: 'easeOutExpo',
-    dragHandle: 1,
-    dynamicHandle: 1,
-    clickBar: 1
+    onWindowEnter: function($el) {
+      console.log($el.data('theme'));
+      setBodyClass($el.data('theme'));
+    }
   });
 
 });
