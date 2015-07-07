@@ -23,6 +23,13 @@ $(function() {
     }
   });
 
+  var timelineCarousel = new Swiper('.gallery--timeline', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  });
+
   var testSliderH = new Swiper('.swiper-container-h', {
     pagination: '.swiper-pagination-h',
     paginationClickable: true,

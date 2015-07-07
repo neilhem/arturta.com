@@ -29,6 +29,7 @@
   align-items: center;
   position: relative;
   height: 100vh;
+  padding-top: 100px;
   padding-bottom: 85px;
   overflow: hidden;
   .container-fluid {
@@ -54,6 +55,22 @@
 
 .page--diary .section:nth-child(1) {
   background-image: image-url('main-03.jpg');
+}
+
+.page--alarm .section:nth-child(1) {
+  background-image: image-url('main-02.jpg');
+}
+
+.page--timeline .section:nth-child(1) {
+  background-image: image-url('main-01.jpg');
+}
+.page--timeline .section:nth-child(2) {
+  background-color: whitesmoke;
+}
+.page--timeline .section:nth-child(3) {
+  background-image: image-url('timeline-03.png');
+  background-position: 50% 80%;
+  background-size: inherit;
 }
 
 .swiper-container--timeline {
@@ -145,13 +162,6 @@
 		transform: translateY(30px);
 	}
 }
-.swiper-container {
-  @include square(100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.swiper-slide,
 .section {
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -168,9 +178,10 @@
 
   .caption {
     position: relative;
-  	margin-top: 10%;
   	max-width: 540px;
   	width: 50%;
+    font-size: 1.5rem;
+    font-weight: 300;
 
     &-nav {
       position: absolute;
@@ -198,11 +209,35 @@
       }
     }
 
+    &-app {
+      margin-top: 4rem;
+      color: rgba(#000, .5);
+      .theme-white & {
+        color: rgba(#fff, .5);
+      }
+      .icon {
+        margin-right: 15px;
+      }
+    }
+
     .desc--lg {
       font-size: 15px;
     }
     .desc--light {
       opacity: .5;
+    }
+
+    .list-unstyled {
+      margin-top: 3rem;
+      font-size: 1.3rem;
+      strong,
+      b {
+        font-weight: 400;
+      }
+    }
+
+    a {
+      color: #1055cd;
     }
   }
 
@@ -419,3 +454,42 @@
     font-size: $font-size-small;
   }
 }
+
+
+.gallery--timeline {
+  @include size(736px, 700px);
+  margin-right: auto;
+  margin-left: auto;
+
+  &::before {
+    @include size(324px, 660px);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -162px;
+    background-image: image-url("case.png");
+    background-repeat: no-repeat;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-pagination {
+    bottom: -10px;
+    .swiper-pagination-bullet {
+      @include square(3px);
+      border-radius: 50%;
+      background-color: rgba(#000, .5);
+      vertical-align: middle;
+    }
+    .swiper-pagination-bullet-active {
+      @include square(11px);
+      background-color: #fff;
+      border: 1px solid #000;
+    }
+  }
+}
+
