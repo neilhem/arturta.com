@@ -35,10 +35,7 @@
 			}
 		}
 		> .active > a {
-			color: #ca0606;
-			> span {
-				border-bottom-color: rgba(#ca0606, .2);
-			}
+			opacity: .5;
 		}
 	}
 }

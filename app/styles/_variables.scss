@@ -2,7 +2,7 @@ $icon-font-path: 					"../bower_components/bootstrap-sass-official/assets/fonts/
 
 $font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $text-color:            	#000;
-$link-color:           		#196bab;
+$link-color:           		$text-color;
 
 $font-size-base:          13px;
 $line-height-computed:    floor((14px *  1.428571429 ));

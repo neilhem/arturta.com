@@ -1,6 +1,6 @@
 .thumbnail--project {
-  animation: animSlide .5s .1s both;
   margin-bottom: 30px;
+  animation: animSlide .5s .1s both;
   border-color: transparent;
   border-radius: 0;
   > img,
@@ -14,6 +14,7 @@
   }
   .title {
     margin-top: 0;
+    margin-bottom: 0;
     font-family: inherit;
     font-size: $font-size-base;
     line-height: 18px;
