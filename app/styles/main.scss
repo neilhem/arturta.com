@@ -1,19 +1,17 @@
 
 @import "variables";
-
-// bower:scss
-@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
-
-@import "base";
 @import "functions";
 @import "mixins";
-@import "helpers";
+
+@import "reset";
+@import "base";
+@import "type";
+@import "grid";
+// @import "helpers";
 @import "layout";
 @import "common";
 
 @import "modules/fonts";
 @import "modules/icons";
-@import "modules/navs";
 @import "modules/pages";
-@import "modules/thumbnails";
+@import "modules/words";

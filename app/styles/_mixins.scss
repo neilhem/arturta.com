@@ -23,3 +23,36 @@
     background-size: cover;
   }
 }
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Animated Headlines
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}

@@ -165,8 +165,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
         sourceMap: true,
-        includePaths: ['bower_components', '<%= config.tmp %>/styles'],
-        imagePath: '../images'
+        includePaths: ['.'],
       },
       dist: {
         files: [{
@@ -192,7 +191,7 @@ module.exports = function(grunt) {
     cssnext: {
       options: {
         browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
-        sourcemap: true
+        sourcemap: true,
       },
       dist: {
         files: [{

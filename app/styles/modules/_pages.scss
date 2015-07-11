@@ -1,116 +1,13 @@
-.page {
-	padding-bottom: 85px;
-
-	&-header {
-		margin-top: 10%;
-		margin-bottom: 50px;
-		padding-bottom: 0;
-		border-width: 0;
-		.title {
-			margin-bottom: $line-height-computed;
-			font-size: 4.4rem;
-			font-weight: 700;
-		}
-	}
-}
-
-.page--clients {
-	position: relative;
-	height: 100vh;
-}
-
 .page--main {
-  height: 100vh;
-  padding-bottom: 0;
-  overflow-y: scroll;
-}
 
-.page--project {
-	position: relative;
-	.nav {
-		margin-bottom: $line-height-computed*1.5;
-	}
-	.page-body {
-    @include clearfix;
-		p {
-			max-width: 714px;
-			margin-bottom: $line-height-computed;
-		}
-		.text-muted {
-			color: rgba(#000, .5);
-		}
-
-		> .pull-right {
-
-		}
-		.team-pagination {
-			position: static;
-			transform: translateY(0);
-		}
-		.team-pagination-item {
-			color: $text-color;
-			&::before {
-				margin-right: 0;
-				width: auto;
-				font-size: 9px;
-			}
-		}
-	}
-  .page-col,
-  .page-side {
-    float: left;
+  .page-desc {
+    max-width: 50rem;
   }
-  .page-col {
-    max-width: 720px;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-size: 7rem;
+    letter-spacing: -2px;
   }
-  .page-side {
-    padding-left: 50px;
-    .title {
-      color: rgba(#000, .5);
-      font-size: 1rem;
-      letter-spacing: .1em;
-    }
-  }
-}
-
-.page--team {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	padding: 30px;
-
-	.page-header,
-	.page-footer {
-		flex: none;
-	}
-
-	.page-body {
-		flex: 1 0 auto;
-		p {
-			width: 50%;
-			max-width: 440px;
-		}
-		.list-inline {
-			margin-top: $line-height-computed;
-			margin-left: -20px;
-			> li {
-				padding-right: 20px;
-				padding-left: 20px;
-			}
-			.link > span {
-				display: block;
-				margin-top: 15px;
-			}
-		}
-	}
-	.page-footer {
-		margin-bottom: 45px;
-		.list-inline {
-			font-style: $font-size-small;
-		}
-		.text-muted {
-			margin-top: 5px;
-			font-size: 1rem;
-		}
-	}
 }

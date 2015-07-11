@@ -1,8 +1,8 @@
-@import "sprites";
-
 .icon {
   display: inline-block;
-  line-height: 1;
   vertical-align: middle;
 }
-@include sprites($spritesheet-sprites);
+
+.icon--logo {
+  @include size(88px, 68px);
+}

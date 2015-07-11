@@ -33,6 +33,7 @@
       </p>
     <![endif]-->
     {{> icons }}
+    {{> loader }}
     <section class="l">
       {{> header }}
       <main class="l-main" role="main">
@@ -44,12 +45,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/swiper/dist/js/swiper.js"></script>
-    <script src="bower_components/picturefill/dist/picturefill.js"></script>
-    <script src="bower_components/iscroll/build/iscroll-probe.js"></script>
-    <script src="//darsa.in/sly/examples/js/vendor/plugins.js"></script>
-    <script src="bower_components/sly/dist/sly.js"></script>
+    <script src="bower_components/greensock/src/uncompressed/TweenMax.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -63,7 +59,7 @@
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/jquery.windows.js"></script>
+    <script src="scripts/loader.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

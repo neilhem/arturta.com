@@ -1,16 +1,44 @@
 $icon-font-path: 					"../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$text-color:            	#000;
-$link-color:           		$text-color;
+$body-bg:                 #000 !default;
+$text-color:            	rgba(#fff, .5) !default;
 
-$font-size-base:          13px;
-$line-height-computed:    floor((14px *  1.428571429 ));
+$link-color:              #fff !default;
+$link-hover-color:        darken($link-color, 15%) !default;
+$link-hover-decoration:   none !default;
 
-$headings-font-weight:    400;
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
 
-$grid-gutter-width:       40px;
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$nav-link-padding:        10px;
-$nav-link-hover-bg:       transparent;
-$navbar-height:           80px;
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$headings-font-family:    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$headings-font-weight:    700 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          #fff !default;
+$headings-small-color:    inherit !default;
+
+$border-radius-base:      4px !default;
+$border-radius-large:     6px !default;
+$border-radius-small:     3px !default;
+
+$hr-border:               #fff !default;
+
+
+$color-1:                 #aebcb9; // Tower Gray
+$color-2:                 #0096a7; // Bondi Blue
+$color-3:                 #0d0d0d; // Cod Gray

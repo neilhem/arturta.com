@@ -1,37 +1,10 @@
-<header class="l-header fade in" role="banner">
-  <nav class="navbar navbar--main">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">
-          <svg class="icon"><use xlink:href="#logo"></svg>
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li{{#is basename "projects"}} class="active"{{/is}}>
-            <a href="projects.html">Проекты</a>
-          </li>
-          {{!-- <li{{#is basename "clients"}} class="active"{{/is}}><a href="clients.html">Клиенты</a></li> --}}
-          <li{{#is basename "team"}} class="active"{{/is}}>
-            <a href="team.html">Команда</a>
-          </li>
-          <li{{#is basename "shop"}} class="active"{{/is}}>
-            <a href="#">Магазин</a>
-          </li>
-          <li{{#is basename "world"}} class="active"{{/is}}>
-            <a href="#">Мир</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right hidden">
-          <li><a href="#">Дневник дизайнера: <span>Алдияр</span></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<header class="l-header" role="banner">
+  <div class="container-fluid">
+    <ul class="list-unstyled lang">
+      <li><a href="artyurta.kz">Каз</a></li>
+      <li class="is-active"><a href="artyurta.ru">Рус</a></li>
+      <li><a href="artyurta.com">Eng</a></li>
+    </ul>
+    <svg class="icon icon--logo"><use xlink:href="#logo"></svg>
+  </div>
 </header>
