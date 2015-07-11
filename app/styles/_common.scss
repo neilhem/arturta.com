@@ -18,6 +18,10 @@
     }
     > a {
       display: block;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
     }
   }
 }

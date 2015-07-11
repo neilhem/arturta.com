@@ -1,7 +1,9 @@
 //
 // Typography
 // --------------------------------------------------
-
+:root {
+  --line-height-computed: 2rem;
+}
 
 // Headings
 // -------------------------
@@ -24,8 +26,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: $line-height-computed;
-  margin-bottom: ($line-height-computed / 2);
+  margin-top: var(--line-height-computed);
+  margin-bottom: calc(var(--line-height-computed) / 2);
 
   small,
   .small {
@@ -35,8 +37,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: ($line-height-computed / 2);
-  margin-bottom: ($line-height-computed / 2);
+  margin-top: calc(var(--line-height-computed) / 2);
+  margin-bottom: calc(var(--line-height-computed) / 2);
 
   small,
   .small {
@@ -56,7 +58,7 @@ h6, .h6 { font-size: $font-size-h6; }
 // -------------------------
 
 p {
-  margin: 0 0 ($line-height-computed / 2);
+  margin: 0 0 calc(var(--line-height-computed) / 2);
 }
 
 
@@ -81,7 +83,7 @@ p {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: calc(var(--line-height-computed) / 2);
   ul,
   ol {
     margin-bottom: 0;
