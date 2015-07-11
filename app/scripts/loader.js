@@ -63,4 +63,11 @@
     },
     ease: Power1.easeInOut
   }, '-=4')
+
+  $(function() {
+    setTimeout(function() {
+      $(container).addClass('hidden');
+      $('.l').removeClass('hidden');
+    }, 3000);
+  });
   })(document, TweenMax);
