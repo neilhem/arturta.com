@@ -1,7 +1,7 @@
 .l {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 
   &-header,
   &-footer {
@@ -18,7 +18,8 @@
   &-main {
     display: flex;
     flex: 1 0 auto;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &-footer {
