@@ -1,4 +1,4 @@
-(function(document, TweenMax) {
+(function(document, window, TweenMax) {
   var container = document.querySelector('.l-loader');
   var drop = document.getElementById('drop');
   var drop2 = document.getElementById('drop2');
@@ -68,6 +68,7 @@
     setTimeout(function() {
       $(container).addClass('hidden');
       $('.l').removeClass('hidden');
+      window.sr = new scrollReveal();
     }, 3000);
   });
-  })(document, TweenMax);
+  })(document, window, TweenMax);
