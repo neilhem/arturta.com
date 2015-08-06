@@ -1,9 +1,17 @@
 {
   "name": "artyurta.com",
   "description": "web page",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/neilhem/artyurta.com.git"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "0.12.x",
+    "npm": "1.2.x"
   },
   "devDependencies": {
     "assemble": "~0.4.42",
@@ -34,10 +42,15 @@
     "load-grunt-tasks": "~2.0.0",
     "time-grunt": "~1.0.0"
   },
-  "engines": {
-    "node": ">=0.12.0"
-  },
   "dependencies": {
-    "normalize.css": "~3.0.3"
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "morgan": "~1.6.1",
+    "node-sass-middleware": "0.8.0",
+    "normalize.css": "~3.0.3",
+    "serve-favicon": "~2.3.0"
   }
 }
